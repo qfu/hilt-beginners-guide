@@ -7,14 +7,21 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 
-class BeerRepository(
+interface BeerRepository {
+
+    suspend fun getBeers(): List<Beer>
+
+}
+
+class BeerRepositoryImpl(
     private val beerService: BeerService,
     private val beerCache: BeerCache,
     private val dispatcher: CoroutineDispatcher
-) {
+) : BeerRepository {
+
     private val mutex = Mutex()
 
-    suspend fun getBeers(): List<Beer> = withContext(dispatcher) {
+    override suspend fun getBeers(): List<Beer> = withContext(dispatcher) {
         mutex.withLock {
             beerCache.load()?.let {
                 return@withContext it
