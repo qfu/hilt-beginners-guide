@@ -6,5 +6,6 @@
     <string name="title_scopes">Scopes</string>
     <string name="title_lazy_bindings">Lazy bindings</string>
     <string name="title_nullable_bindings">Nullable bindings</string>
+    <string name="title_optional_bindings">Optional bindings</string>
     <string name="title_multi_bindings">Multi bindings</string>
 </resources>

@@ -41,6 +41,9 @@
             android:name=".nullable.NullableActivity"
             android:label="@string/title_nullable_bindings" />
         <activity
+            android:name=".optional.OptionalActivity"
+            android:label="@string/title_optional_bindings" />
+        <activity
             android:name=".multibindings.MultiBindingsActivity"
             android:label="@string/title_multi_bindings" />
     </application>

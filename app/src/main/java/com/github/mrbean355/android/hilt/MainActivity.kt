@@ -21,6 +21,7 @@ import com.github.mrbean355.android.hilt.components.ComponentsActivity
 import com.github.mrbean355.android.hilt.lazy.LazyActivity
 import com.github.mrbean355.android.hilt.multibindings.MultiBindingsActivity
 import com.github.mrbean355.android.hilt.nullable.NullableActivity
+import com.github.mrbean355.android.hilt.optional.OptionalActivity
 import com.github.mrbean355.android.hilt.qualifiers.QualifiersActivity
 import com.github.mrbean355.android.hilt.scopes.ScopesActivity
 import kotlin.reflect.KClass
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 DemoItem(stringResource(R.string.title_scopes)) { ScopesActivity::class.start() }
                 DemoItem(stringResource(R.string.title_lazy_bindings)) { LazyActivity::class.start() }
                 DemoItem(stringResource(R.string.title_nullable_bindings)) { NullableActivity::class.start() }
+                DemoItem(stringResource(R.string.title_optional_bindings)) { OptionalActivity::class.start() }
                 DemoItem(stringResource(R.string.title_multi_bindings)) { MultiBindingsActivity::class.start() }
             }
         }
