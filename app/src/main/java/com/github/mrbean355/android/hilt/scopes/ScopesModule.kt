@@ -10,4 +10,4 @@ object ScopesModule {
 
 }
 
-class Cat()
+class Jetpack(val serialNumber: Long)

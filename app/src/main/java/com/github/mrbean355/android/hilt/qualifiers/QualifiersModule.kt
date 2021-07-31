@@ -10,4 +10,4 @@ object QualifiersModule {
 
 }
 
-class Phone
+class Phone(val model: String)

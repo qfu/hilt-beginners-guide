@@ -10,4 +10,4 @@ interface OptionalBindingsModule {
 
 }
 
-class Money
+class Money(val amount: Long)

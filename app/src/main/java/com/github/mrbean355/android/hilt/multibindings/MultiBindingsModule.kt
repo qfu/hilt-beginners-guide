@@ -10,4 +10,4 @@ interface MultiBindingsModule {
 
 }
 
-data class Game(val name: String)
+class Game(val name: String)

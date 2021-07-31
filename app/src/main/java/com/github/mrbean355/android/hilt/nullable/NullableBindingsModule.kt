@@ -10,4 +10,4 @@ object NullableBindingsModule {
 
 }
 
-class House
+class House(val size: Int)

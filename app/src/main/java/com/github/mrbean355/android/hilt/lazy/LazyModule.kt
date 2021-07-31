@@ -10,4 +10,4 @@ object LazyModule {
 
 }
 
-class Car
+class Car(val make: String)

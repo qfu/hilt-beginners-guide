@@ -1,5 +1,8 @@
 package com.github.mrbean355.android.hilt.components
 
+import android.app.Activity
+import android.app.Application
+import androidx.fragment.app.Fragment
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
@@ -24,8 +27,8 @@ object FragmentModule {
 
 }
 
-class Coffee
+class AppMonitor(val application: Application)
 
-class Tea
+class ActivityMonitor(val activity: Activity)
 
-class HotChocolate
+class FragmentMonitor(val fragment: Fragment)
