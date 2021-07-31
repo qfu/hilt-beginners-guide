@@ -38,10 +38,10 @@
             android:name=".lazy.LazyActivity"
             android:label="@string/title_lazy_bindings" />
         <activity
-            android:name=".nullable.NullableActivity"
+            android:name=".nullable.NullableBindingsActivity"
             android:label="@string/title_nullable_bindings" />
         <activity
-            android:name=".optional.OptionalActivity"
+            android:name=".optional.OptionalBindingsActivity"
             android:label="@string/title_optional_bindings" />
         <activity
             android:name=".multibindings.MultiBindingsActivity"

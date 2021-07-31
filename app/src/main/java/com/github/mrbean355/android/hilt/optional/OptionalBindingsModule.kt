@@ -1,4 +1,4 @@
-package com.github.mrbean355.android.hilt.nullable
+package com.github.mrbean355.android.hilt.optional
 
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -6,8 +6,8 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NullableModule {
+interface OptionalBindingsModule {
 
 }
 
-class House
+class Money
