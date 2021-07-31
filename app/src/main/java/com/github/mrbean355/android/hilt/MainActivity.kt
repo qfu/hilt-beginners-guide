@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.github.mrbean355.android.hilt.basics.BasicsActivity
+import com.github.mrbean355.android.hilt.combination.CombinationActivity
 import com.github.mrbean355.android.hilt.components.ComponentsActivity
 import com.github.mrbean355.android.hilt.lazy.LazyActivity
 import com.github.mrbean355.android.hilt.multibindings.MultiBindingsActivity
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                 DemoItem(stringResource(R.string.title_nullable_bindings)) { NullableBindingsActivity::class.start() }
                 DemoItem(stringResource(R.string.title_optional_bindings)) { OptionalBindingsActivity::class.start() }
                 DemoItem(stringResource(R.string.title_multi_bindings)) { MultiBindingsActivity::class.start() }
+                DemoItem(stringResource(R.string.title_combination)) { CombinationActivity::class.start() }
             }
         }
     }
