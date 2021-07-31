@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Hilt Beginner</string>
+    <string name="title_basics">Basics</string>
+    <string name="title_components">Components</string>
+    <string name="title_qualifiers">Qualifiers</string>
+    <string name="title_scopes">Scopes</string>
+    <string name="title_lazy_bindings">Lazy bindings</string>
+    <string name="title_nullable_bindings">Nullable bindings</string>
+    <string name="title_multi_bindings">Multi bindings</string>
 </resources>

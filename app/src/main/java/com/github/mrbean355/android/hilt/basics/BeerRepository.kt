@@ -1,7 +1,5 @@
-package com.github.mrbean355.android.hilt.data
+package com.github.mrbean355.android.hilt.basics
 
-import com.github.mrbean355.android.hilt.service.Beer
-import com.github.mrbean355.android.hilt.service.BeerService
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex

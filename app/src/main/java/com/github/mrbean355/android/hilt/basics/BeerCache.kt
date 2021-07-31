@@ -1,6 +1,4 @@
-package com.github.mrbean355.android.hilt.data
-
-import com.github.mrbean355.android.hilt.service.Beer
+package com.github.mrbean355.android.hilt.basics
 
 object BeerCache {
     private var beers: List<Beer>? = null

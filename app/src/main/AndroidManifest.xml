@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.github.mrbean355.android.hilt.BeerApplication"
+        android:name=".DemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hilt">
         <activity
-            android:name="com.github.mrbean355.android.hilt.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".basics.BasicsActivity"
+            android:label="@string/title_basics" />
+        <activity
+            android:name=".components.ComponentsActivity"
+            android:label="@string/title_components" />
+        <activity
+            android:name=".qualifiers.QualifiersActivity"
+            android:label="@string/title_qualifiers" />
+        <activity
+            android:name=".scopes.ScopesActivity"
+            android:label="@string/title_scopes" />
+        <activity
+            android:name=".lazy.LazyActivity"
+            android:label="@string/title_lazy_bindings" />
+        <activity
+            android:name=".nullable.NullableActivity"
+            android:label="@string/title_nullable_bindings" />
+        <activity
+            android:name=".multibindings.MultiBindingsActivity"
+            android:label="@string/title_multi_bindings" />
     </application>
 
 </manifest>
