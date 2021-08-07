@@ -46,9 +46,6 @@
         <activity
             android:name=".multibindings.MultiBindingsActivity"
             android:label="@string/title_multi_bindings" />
-        <activity
-            android:name=".combination.CombinationActivity"
-            android:label="@string/title_combination" />
     </application>
 
 </manifest>

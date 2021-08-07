@@ -1,33 +1,28 @@
 package com.github.mrbean355.android.hilt.basics
 
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
+import javax.inject.Inject
 
-class BeerRepositoryImpl(
+interface BeerRepository {
+
+    suspend fun getBeers(): List<Beer>
+
+}
+
+// Adding @Inject to a constructor tells Dagger to use that constructor when creating the class.
+// All parameters of the constructor also need to be provided by Dagger.
+class BeerRepositoryImpl @Inject constructor(
     private val beerService: BeerService,
     private val beerCache: BeerCache,
     private val dispatcher: CoroutineDispatcher
-) {
+) : BeerRepository {
 
     private val mutex = Mutex()
 
-    constructor() : this(
-        beerService = Retrofit.Builder()
-            .baseUrl("https://api.punkapi.com/v2/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(),
-        beerCache = BeerCache,
-        dispatcher = Dispatchers.IO
-    )
-
-    suspend fun getBeers(): List<Beer> = withContext(dispatcher) {
+    override suspend fun getBeers(): List<Beer> = withContext(dispatcher) {
         mutex.withLock {
             beerCache.load()?.let {
                 return@withContext it

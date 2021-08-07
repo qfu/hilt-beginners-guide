@@ -17,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.github.mrbean355.android.hilt.basics.BasicsActivity
-import com.github.mrbean355.android.hilt.combination.CombinationActivity
 import com.github.mrbean355.android.hilt.components.ComponentsActivity
 import com.github.mrbean355.android.hilt.lazy.LazyActivity
 import com.github.mrbean355.android.hilt.multibindings.MultiBindingsActivity
@@ -39,15 +38,14 @@ class MainActivity : AppCompatActivity() {
                 horizontalAlignment = CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                DemoItem(stringResource(R.string.title_basics)) { BasicsActivity::class.start() }
-                DemoItem(stringResource(R.string.title_components)) { ComponentsActivity::class.start() }
-                DemoItem(stringResource(R.string.title_qualifiers)) { QualifiersActivity::class.start() }
-                DemoItem(stringResource(R.string.title_scopes)) { ScopesActivity::class.start() }
-                DemoItem(stringResource(R.string.title_lazy_bindings)) { LazyActivity::class.start() }
-                DemoItem(stringResource(R.string.title_nullable_bindings)) { NullableBindingsActivity::class.start() }
-                DemoItem(stringResource(R.string.title_optional_bindings)) { OptionalBindingsActivity::class.start() }
-                DemoItem(stringResource(R.string.title_multi_bindings)) { MultiBindingsActivity::class.start() }
-                DemoItem(stringResource(R.string.title_combination)) { CombinationActivity::class.start() }
+                TextButton(stringResource(R.string.title_basics)) { BasicsActivity::class.start() }
+                TextButton(stringResource(R.string.title_components)) { ComponentsActivity::class.start() }
+                TextButton(stringResource(R.string.title_qualifiers)) { QualifiersActivity::class.start() }
+                TextButton(stringResource(R.string.title_scopes)) { ScopesActivity::class.start() }
+                TextButton(stringResource(R.string.title_lazy_bindings)) { LazyActivity::class.start() }
+                TextButton(stringResource(R.string.title_nullable_bindings)) { NullableBindingsActivity::class.start() }
+                TextButton(stringResource(R.string.title_optional_bindings)) { OptionalBindingsActivity::class.start() }
+                TextButton(stringResource(R.string.title_multi_bindings)) { MultiBindingsActivity::class.start() }
             }
         }
     }
@@ -58,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 @Composable
-fun DemoItem(label: String, onClick: () -> Unit) {
+fun TextButton(label: String, onClick: () -> Unit) {
     Button(onClick) {
         Text(label)
     }

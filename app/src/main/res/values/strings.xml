@@ -8,5 +8,4 @@
     <string name="title_nullable_bindings">Nullable bindings</string>
     <string name="title_optional_bindings">Optional bindings</string>
     <string name="title_multi_bindings">Multi bindings</string>
-    <string name="title_combination">Combination</string>
 </resources>
