@@ -42,5 +42,12 @@ interface BasicsModule {
         @Provides
         fun provideCoroutineDispatcher(): CoroutineDispatcher = Dispatchers.IO
 
+        @Provides
+        fun provideStockService(): StockService = Retrofit.Builder()
+            .baseUrl("https://storage.googleapis.com/cash-homework/cash-stocks-api/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create()
+
     }
 }

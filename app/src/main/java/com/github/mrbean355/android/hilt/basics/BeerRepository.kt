@@ -17,7 +17,8 @@ interface BeerRepository {
 class BeerRepositoryImpl @Inject constructor(
     private val beerService: BeerService,
     private val beerCache: BeerCache,
-    private val dispatcher: CoroutineDispatcher
+    private val dispatcher: CoroutineDispatcher,
+    private val stockService: StockService,
 ) : BeerRepository {
 
     private val mutex = Mutex()
@@ -30,6 +31,7 @@ class BeerRepositoryImpl @Inject constructor(
             val data = beerService.list().body()
                 ?: return@withContext emptyList()
             beerCache.save(data)
+            println(stockService.getPortfolio())
             data
         }
     }
